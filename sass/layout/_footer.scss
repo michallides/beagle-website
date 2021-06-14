@@ -1,0 +1,41 @@
+footer {
+  background: $color-4;
+  text-align: center;
+  padding: 2rem 0;
+
+  p {
+    @include font($ff-4, $fs-sm, $fw-r);
+    color: $color-3;
+    margin: 0;
+
+    @include media(em(600)) {
+      font-size: $fs-xs;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  max-width: 17rem;
+  margin: 2rem auto 4rem;
+  justify-content: space-between;
+  font-size: $fs-lg;
+
+  @include media(em(600)) {
+    font-size: $fs-md-2;
+  }
+
+  a {
+    color: $color-3;
+    @include easeOut;
+
+    &:hover,
+    &:focus {
+      color: $color-2;
+    }
+  }
+}
+
+.copyright {
+  font-size: $fs-xs;
+}

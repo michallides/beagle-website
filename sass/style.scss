@@ -1,0 +1,20 @@
+// Abstracts
+@import 'abstracts/functions';  // Sass Functions
+@import 'abstracts/mixins';     // Sass Mixins
+@import 'abstracts/variables';  // Sass Variables
+
+// Base
+@import 'base/normalize';       // Normalize
+@import 'base/general';         // General rules
+@import 'base/typography';      // Typography rules
+
+// Layout
+@import 'layout/navigation';    // Navigation
+@import 'layout/footer';        // Footer
+
+// Pages
+@import 'pages/home';           // Home specific styles
+@import 'pages/about';          // About specific styles
+@import 'pages/gallery';        // Gallery specific styles
+@import 'pages/contact';        // Contact specific styles
+@import 'pages/e-shop';         // E-shop specific styles

@@ -1,0 +1,39 @@
+@mixin font($ff, $fs, $fw) {
+  font: {
+    family: $ff;
+    size: $fs;
+    weight: $fw;
+  }
+}
+
+@mixin afterShade($color) {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: $color;
+}
+
+@mixin container($width: 80rem, $padding: 3rem) {
+  max-width: $width;
+  padding: $padding;
+  margin: 0 auto;
+}
+
+@mixin easeOut {
+  transition: all 0.2s ease-out;
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-mm($width-max, $width-min) {
+  @media screen and (max-width: $width-max) and (min-width: $width-min) {
+    @content;
+  }
+}

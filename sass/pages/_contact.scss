@@ -1,0 +1,97 @@
+.main-contact {
+  img {
+    display: block;
+    max-width: 30rem;
+    width: 100%;
+    padding: 0 3rem 0 1rem;
+    margin: 2rem auto 0;
+  }
+}
+
+.contact {
+  @include container(50rem);
+  font-family: $ff-1;
+  color: $color-t;
+  display: grid;
+  grid-template-areas:
+    'name email'
+    'message message'
+    '. button';
+  gap: 1rem;
+
+  @include media(em(700)) {
+    grid-template-areas:
+      'name name'
+      'email email'
+      'message message'
+      '. button';
+  }
+
+  label,
+  .button {
+    font-size: $fs-xs-2;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: $fs-xs;
+    background: rgba($color-t, 0.05);
+    padding: 0.75rem;
+    margin-top: 0.2rem;
+    border: 1px solid rgba($color-t, 0.1);
+
+    &:focus {
+      background: lighten(rgba($color-t, 0.05), 40%);
+      border: 1px solid rgba($color-t, 0.2);
+    }
+  }
+
+  .name {
+    grid-area: name;
+    display: block;
+  }
+
+  .email {
+    grid-area: email;
+    display: block;
+  }
+
+  .message {
+    grid-area: message;
+    display: block;
+  }
+
+  .button {
+    grid-area: button;
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    line-height: 1;
+    padding: 1rem 3rem;
+    color: $color-1;
+    background: $color-t;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+    @include easeOut;
+
+    @include media(em(600)) {
+      font-size: $fs-xs;
+      padding: 0.8rem 1.5rem;
+    }
+
+    &:hover {
+      color: $color-t;
+      background: $color-1;
+      outline: 1px solid rgba($color-t, 0.2);
+    }
+
+    &:active {
+      border: none;
+      outline: 1px solid $color-t;
+    }
+  }
+}
